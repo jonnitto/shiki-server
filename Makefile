@@ -2,6 +2,10 @@
 
 .DEFAULT_GOAL := help
 
+## Prettier files
+prettier:
+	npx prettier --write --no-error-on-unmatched-pattern '**/*.{js,md}'
+
 ## Build and run local docker image
 locale: locale-build locale-run
 

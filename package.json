@@ -12,5 +12,8 @@
   },
   "dependencies": {
     "shiki": "^2.4.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.1"
   }
 }

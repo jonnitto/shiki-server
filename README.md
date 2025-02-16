@@ -60,17 +60,17 @@ An api call should look like this:
 ```js
 const body = {
   code: '<button type="button">Hello World</button>',
-  lang: 'html',
-  theme: 'github-light',
-  themeDark: 'github-dark',
+  lang: "html",
+  theme: "github-light",
+  themeDark: "github-dark",
 };
 
-fetch('http://YOUR_ENDPOINT:8090/', {
-  method: 'POST',
+fetch("http://YOUR_ENDPOINT:8090/", {
+  method: "POST",
   headers: {
-    'Content-Type': 'application/json; charset=utf-8',
+    "Content-Type": "application/json; charset=utf-8",
   },
-  body: JSON.stringify(body)
+  body: JSON.stringify(body),
 });
 ```
 
@@ -111,7 +111,7 @@ The server response with an JSON object:
     "dark": {
       "fg": "foreground color of the dark theme (if set, otherwise dark will be null)",
       "bg": "background color of the dark theme (if set, otherwise dark will be null)"
-    },
+    }
   },
   "markup": "The original markup passed"
 }

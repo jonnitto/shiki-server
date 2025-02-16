@@ -1,17 +1,12 @@
-import {
-    bundledLanguages,
-    bundledThemes,
-    codeToHtml,
-    createHighlighter
-  } from 'shiki/bundle/full'
-import { FusionSyntax } from './FusionSyntax.js';
+import { bundledLanguages, bundledThemes, createHighlighter } from "shiki/bundle/full";
+import { FusionSyntax } from "./FusionSyntax.js";
 
 const FusionLanguage = {
     embeddedLangs: ["html-derivative"],
     ...FusionSyntax,
 };
 
-export const languageKeys = [...Object.keys(bundledLanguages), 'neosfusion'];
+export const languageKeys = [...Object.keys(bundledLanguages), "neosfusion"];
 export const themeKeys = Object.keys(bundledThemes);
 
 let highlighter = null;
@@ -28,13 +23,12 @@ async function getHighlighter() {
     calledHighlighter = true;
     highlighter = await createHighlighter({
         langs: [],
-        themes: themeKeys
+        themes: themeKeys,
     });
     return highlighter;
 }
 
-
-export async function highlight({code, lang, theme, themeDark}) {
+export async function highlight({ code, lang, theme, themeDark }) {
     code = code.trim();
     await getHighlighter();
 
@@ -49,7 +43,7 @@ export async function highlight({code, lang, theme, themeDark}) {
     if (themeDark) {
         options.themes = {
             light: theme,
-            dark: themeDark
+            dark: themeDark,
         };
     } else {
         options.theme = theme;
@@ -59,7 +53,7 @@ export async function highlight({code, lang, theme, themeDark}) {
     const colors = {
         default: getColors(theme),
         dark: getColors(themeDark),
-    }
+    };
 
     return { html, colors, code };
 }
@@ -76,5 +70,5 @@ function getColors(theme) {
     return {
         fg: colors.fg,
         bg: colors.bg,
-    }
+    };
 }

@@ -63,10 +63,10 @@ export const FusionSyntax = {
                             name: "keyword.control.fusion",
                             match: "(@if)|(@position)",
                             captures: {
-                                "1": {
+                                1: {
                                     name: "keyword.control.if.fusion",
                                 },
-                                "2": {
+                                2: {
                                     name: "keyword.control.position.fusion",
                                 },
                             },
@@ -77,13 +77,13 @@ export const FusionSyntax = {
                     name: "keyword.operator.fusion",
                     match: "(<)|(>)|(=)",
                     captures: {
-                        "1": {
+                        1: {
                             name: "keyword.operator.copy.fusion",
                         },
-                        "2": {
+                        2: {
                             name: "keyword.operator.unset.fusion",
                         },
-                        "3": {
+                        3: {
                             name: "keyword.operator.assign.fusion",
                         },
                     },
@@ -132,18 +132,18 @@ export const FusionSyntax = {
                         {
                             begin: "(@[\\w\\d_\\-]+)|([\\w\\d_\\-]+)|('.*?')|(\".*?\")",
                             beginCaptures: {
-                                "1": {
+                                1: {
                                     name: "entity.other.attribute-name.fusion",
                                 },
-                                "2": {
+                                2: {
                                     comment:
                                         "TODO: Set first property path element to 'variable.parameter...' but only inside prototype() blocks",
                                     name: "variable.other.fusion",
                                 },
-                                "3": {
+                                3: {
                                     name: "string.quoted.single.fusion",
                                 },
-                                "4": {
+                                4: {
                                     name: "string.quoted.double.fusion",
                                 },
                             },
@@ -166,10 +166,10 @@ export const FusionSyntax = {
                     name: "support.other.include.fusion",
                     match: "(include):\\s+(.*)",
                     captures: {
-                        "1": {
+                        1: {
                             name: "keyword.other.include.fusion",
                         },
-                        "2": {
+                        2: {
                             name: "string.path.include.fusion",
                         },
                     },
@@ -178,7 +178,7 @@ export const FusionSyntax = {
                     begin: "(prototype)\\(",
                     end: "\\)",
                     beginCaptures: {
-                        "1": {
+                        1: {
                             name: "keyword.other.prototype.fusion",
                         },
                     },
@@ -192,12 +192,12 @@ export const FusionSyntax = {
                     begin: "(\\$\\{)",
                     end: "(\\})",
                     beginCaptures: {
-                        "1": {
+                        1: {
                             name: "keyword.other.scope.begin.eel.fusion",
                         },
                     },
                     endCaptures: {
-                        "1": {
+                        1: {
                             name: "keyword.other.scope.end.eel.fusion",
                         },
                     },
@@ -212,13 +212,13 @@ export const FusionSyntax = {
         block: {
             begin: "{",
             beginCaptures: {
-                "0": {
+                0: {
                     name: "punctuation.definition.block.begin.fusion",
                 },
             },
             end: "}",
             endCaptures: {
-                "0": {
+                0: {
                     name: "punctuation.definition.block.end.fusion",
                 },
             },
@@ -277,10 +277,10 @@ export const FusionSyntax = {
                     comment: "Documentation - Property",
                     match: "(///) ([\\w\\.,\\\\:|{}\"']+(?:<[\\w\\.,\\\\:|{}\"'<>]+>)?)\\s(.*)?",
                     captures: {
-                        "1": {
+                        1: {
                             name: "entity.name.section.properties.fusion",
                         },
-                        "2": {
+                        2: {
                             patterns: [
                                 {
                                     include: "#helper_prototype_name",
@@ -307,7 +307,7 @@ export const FusionSyntax = {
                                 },
                             ],
                         },
-                        "3": {
+                        3: {
                             name: "markup.quote.documentation.line.text.fusion",
                             patterns: [
                                 {
@@ -324,19 +324,19 @@ export const FusionSyntax = {
                     comment: "Documentation - Prototype",
                     begin: "^(/\\*\\*)(.*)",
                     beginCaptures: {
-                        "1": {
+                        1: {
                             name: "entity.name.section.prototype.fusion",
                         },
-                        "2": {
+                        2: {
                             name: "invalid.illegal",
                         },
                     },
                     end: "(\\*\\*/)|(\\*/)",
                     endCaptures: {
-                        "1": {
+                        1: {
                             name: "entity.name.section.prototype.fusion",
                         },
-                        "2": {
+                        2: {
                             name: "invalid.deprecated",
                         },
                     },
@@ -345,10 +345,10 @@ export const FusionSyntax = {
                             name: "markup.quote.documentation.section.properties.text.fusion",
                             begin: "\\s*(# (Properties|properties))\\s*$",
                             beginCaptures: {
-                                "1": {
+                                1: {
                                     name: "entity.name.section.properties.fusion",
                                 },
-                                "2": {
+                                2: {
                                     name: "keyword.other.doc.properties.fusion",
                                 },
                             },
@@ -357,10 +357,10 @@ export const FusionSyntax = {
                                 {
                                     match: '^\\s*(\\.)(@?[a-zA-Z_\\.\\-:]+?)(: ([\\w\\.\\\\:|]+)) (= ((?:".*")|\\S+) )?(.+)$',
                                     captures: {
-                                        "1": {
+                                        1: {
                                             name: "comment.fusion",
                                         },
-                                        "2": {
+                                        2: {
                                             name: "variable.other.fusion",
                                             patterns: [
                                                 {
@@ -369,13 +369,13 @@ export const FusionSyntax = {
                                                 },
                                             ],
                                         },
-                                        "4": {
+                                        4: {
                                             name: "storage.type",
                                         },
-                                        "6": {
+                                        6: {
                                             name: "constant",
                                         },
-                                        "7": {
+                                        7: {
                                             name: "string.unquoted",
                                         },
                                     },
@@ -386,7 +386,7 @@ export const FusionSyntax = {
                             name: "markup.quote.documentation.section.$2.text.fusion",
                             begin: "(# (.*))\\s*$",
                             beginCaptures: {
-                                "1": {
+                                1: {
                                     name: "entity.name.section.$2.fusion",
                                 },
                             },
@@ -428,7 +428,7 @@ export const FusionSyntax = {
                     name: "comment.line.double-slash.lsp-semantic.fusion",
                     match: "// ?(@fusion-.+)",
                     captures: {
-                        "1": {
+                        1: {
                             name: "support.other.comment.lsp-semantic.fusion",
                         },
                     },
@@ -453,16 +453,16 @@ export const FusionSyntax = {
                 {
                     begin: "(afx)(`)",
                     beginCaptures: {
-                        "1": {
+                        1: {
                             name: "support.function.dsl.afx.fusion",
                         },
-                        "2": {
+                        2: {
                             name: "string.quoted.other.begin.afx.fusion",
                         },
                     },
                     end: "(`)",
                     endCaptures: {
-                        "1": {
+                        1: {
                             name: "string.quoted.other.end.afx.fusion",
                         },
                     },
@@ -477,16 +477,16 @@ export const FusionSyntax = {
                     name: "string.quoted.other.dsl.fusion",
                     begin: "([a-zA-Z_-]+)(`)",
                     beginCaptures: {
-                        "1": {
+                        1: {
                             name: "support.function.dsl.fusion",
                         },
-                        "2": {
+                        2: {
                             name: "string.quoted.other.begin.afx.fusion",
                         },
                     },
                     end: "(`)",
                     endCaptures: {
-                        "1": {
+                        1: {
                             name: "string.quoted.other.end.afx.fusion",
                         },
                     },
@@ -499,12 +499,12 @@ export const FusionSyntax = {
                     begin: "(\\{)",
                     end: "(\\})",
                     beginCaptures: {
-                        "1": {
+                        1: {
                             name: "keyword.other.scope.begin.afx.fusion",
                         },
                     },
                     endCaptures: {
-                        "1": {
+                        1: {
                             name: "keyword.other.scope.end.afx.fusion",
                         },
                     },
