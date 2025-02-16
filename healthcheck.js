@@ -25,7 +25,7 @@ fetch(`http://${hostname}:${port}`, {
 })
     .then((response) => response.text())
     .then((response) => {
-        if (response.includes(token) && response.includes("shiki shiki-themes github-dark-dimmed")) {
+        if (response.includes(token) && response.includes("shiki github-dark-dimmed")) {
             process.exit(0);
         }
         process.exit(1);
