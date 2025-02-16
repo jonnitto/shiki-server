@@ -1,7 +1,7 @@
 # Shiki docker microservice / server
 
 Standalone [shiki](https://shiki.style) server, listening on port 8090/tcp. Usefull if you want to use the awesome code
-highlighting from [shiki](https://shiki.style), but without to include the javascript in the frontend. It adss also
+highlighting from [shiki](https://shiki.style), but without to include the javascript in the frontend. It adds also
 support for the language [Neos Fusion](https://www.neos.io). (The key for this language is `neosfusion`)
 
 ## Overview
