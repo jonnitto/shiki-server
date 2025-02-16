@@ -1,0 +1,16 @@
+{
+  "name": "shiki-server",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "shiki-server": "bin/shiki-server"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "healthcheck": "node healthcheck.js"
+  },
+  "dependencies": {
+    "shiki": "^2.4.1"
+  }
+}

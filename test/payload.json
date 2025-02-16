@@ -1,0 +1,6 @@
+{
+    "lang": "neosfusion",
+    "theme": "github-light",
+    "themeDark": "github-dark",
+    "code": "prototype(Foo.Bar:Component) < prototype(Neos.Fusion:Component) {\n  /// string This is a comment\n  foo = 'bar'\n  renderer = afx`\n      <button type=\"button\">{props.foo}</button>\n  `\n}\n"
+}
