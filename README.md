@@ -113,7 +113,7 @@ The server response with an JSON object:
       "bg": "background color of the dark theme (if set, otherwise dark will be null)"
     }
   },
-  "markup": "The original markup passed"
+  "code": "The original markup passed"
 }
 ```
 
