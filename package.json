@@ -14,6 +14,6 @@
     "shiki": "^3.7.0"
   },
   "devDependencies": {
-    "prettier": "^3.6.0"
+    "prettier": "^3.6.1"
   }
 }
