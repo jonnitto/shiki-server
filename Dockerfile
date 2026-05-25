@@ -1,4 +1,4 @@
-FROM node:22-alpine
+FROM node:26-alpine
 
 LABEL org.opencontainers.image.authors="Jon Uhlmann"
 LABEL org.opencontainers.image.description="Standalone shiki server, listening on port 8090/tcp."
@@ -22,7 +22,7 @@ RUN set -ex \
     && apk --no-cache upgrade \
     && apk --no-cache add curl ca-certificates \
     && update-ca-certificates \
-    && npm --env=production install
+    && npm --omit=dev install
 
 COPY index.js ./index.js
 COPY healthcheck.js ./healthcheck.js
