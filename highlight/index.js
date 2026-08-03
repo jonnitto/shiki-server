@@ -28,7 +28,7 @@ async function getHighlighter() {
     return highlighter;
 }
 
-export async function highlight({ code, lang, theme, themeDark }) {
+export async function highlight({ code, lang, theme, themeDark, cssClass }) {
     code = code.trim();
     await getHighlighter();
 
@@ -47,6 +47,16 @@ export async function highlight({ code, lang, theme, themeDark }) {
         };
     } else {
         options.theme = theme;
+    }
+
+    if (cssClass && typeof cssClass === "string") {
+        options.transformers = [
+            {
+                pre(node) {
+                    this.addClassToHast(node, cssClass)
+                },
+            },
+        ];
     }
 
     const html = await highlighter.codeToHtml(code, options);

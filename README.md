@@ -55,6 +55,14 @@ CORS "*"
 
 ## API
 
+| Key         | Value description                      | Required |
+| ----------- | -------------------------------------- | :------: |
+| `code`      | The markup                             |    ✓     |
+| `lang`      | The language of the markup             |    ✓     |
+| `theme`     | The theme for the code highlighter     |    ✓     |
+| `themeDark` | Dark mode theme                        |          |
+| `cssClass`  | Add a CSS class to the `<pre>` element |          |
+
 An api call should look like this:
 
 ```js
@@ -63,6 +71,7 @@ const body = {
   lang: "html",
   theme: "github-light",
   themeDark: "github-dark",
+  cssClass: "my-custom-class",
 };
 
 fetch("http://YOUR_ENDPOINT:8090/", {
@@ -89,7 +98,7 @@ $request = new Request(
   [
       "Content-Type" => "application/json; charset=utf-8"
   ],
-  "{\"code\":\"<button type=\\\"button\\\">Hello World</button>\",\"lang\":\"html\",\"theme\":\"github-light\",\"themeDark\":\"github-dark\"}");
+  "{\"code\":\"<button type=\\\"button\\\">Hello World</button>\",\"lang\":\"html\",\"theme\":\"github-light\",\"themeDark\":\"github-dark\",\"cssClass\":\"my-custom-class\"}");
 
 $response = $client->send($request);
 ```
