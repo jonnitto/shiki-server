@@ -53,7 +53,7 @@ export async function highlight({ code, lang, theme, themeDark, cssClass }) {
         options.transformers = [
             {
                 pre(node) {
-                    this.addClassToHast(node, cssClass)
+                    this.addClassToHast(node, cssClass);
                 },
             },
         ];
