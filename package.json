@@ -11,7 +11,7 @@
     "healthcheck": "node healthcheck.js"
   },
   "dependencies": {
-    "shiki": "^4.4.3"
+    "shiki": "^4.5.0"
   },
   "devDependencies": {
     "prettier": "^3.9.9"
